@@ -1,1 +1,1 @@
-# class-box-frontend
+background-image: linear-gradient(to right top, #484b95, #5c50a4, #7354b1, #8a57bd, #a359c8);
