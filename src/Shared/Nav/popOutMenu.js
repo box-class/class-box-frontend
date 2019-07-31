@@ -6,6 +6,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import menu from '../../assetts/menu.png';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   list: {
@@ -43,13 +44,25 @@ export default function HomePageNavMenu() {
       <List>
           <ListItem button>
             <ListItemText>
-                Login
+              <Link to='/student/login'>
+                Student Login
+              </Link>
             </ListItemText>
           </ListItem>
 
           <ListItem button>
             <ListItemText>
-                Sign Up
+              <Link to='/teacher/login'>
+                Teacher Login
+              </Link>
+            </ListItemText>
+          </ListItem>
+
+          <ListItem button>
+            <ListItemText>
+              <Link to='/student/signup'>
+                Student Sign Up
+              </Link>
             </ListItemText>
           </ListItem>
       </List>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from '../Shared/variables';
 
 export const SearchBarStyle = styled.div`
     display: flex;
@@ -25,4 +26,23 @@ export const SearchBarStyle = styled.div`
         align-self: center;
         padding-right: 5px;
     }
+`
+
+export const Buttons = styled.button`
+    border: none;
+    border-radius: 50px;
+    padding: 10px 30px;
+    color: white;
+    background-color: ${colors.green};
+
+    :focus {
+        outline: none;
+    }
+
+    ${({large}) => large && `
+        width: 80%;
+        padding: 15px;
+        box-shadow: 5px 10px 5px #EEE;
+        font-size: 18px;
+    `}
 `
