@@ -6,6 +6,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import menu from '../../../assetts/menu.png';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   list: {
@@ -43,13 +44,23 @@ export default function StudentNav() {
       <List>
           <ListItem button>
             <ListItemText>
-                Dashboard
+                <Link to='/student/dashboard'>
+                  Dashboard
+                </Link>
             </ListItemText>
           </ListItem>
 
           <ListItem button>
             <ListItemText>
-                Course List
+                Your Courses
+            </ListItemText>
+          </ListItem>
+
+          <ListItem button>
+            <ListItemText>
+              <Link to='/register/courses'>
+                Register For Courses
+              </Link>
             </ListItemText>
           </ListItem>
 
@@ -62,6 +73,14 @@ export default function StudentNav() {
           <ListItem button>
             <ListItemText>
                 Teacher Updates
+            </ListItemText>
+          </ListItem>
+
+          <ListItem button>
+            <ListItemText>
+              <Link to='/student/login'>
+                Sign Out
+              </Link>
             </ListItemText>
           </ListItem>
       </List>
