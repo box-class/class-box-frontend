@@ -9,8 +9,8 @@ export default class GradesDoughnut extends Component {
     chartRef = React.createRef();
 
     componentDidMount() {
-        console.log(this.props)
         const myChartRef = this.chartRef.current.getContext("2d");
+        const { width: graphWidth } = myChartRef.canvas;
 
         const gradientColors = [
             {
@@ -26,12 +26,12 @@ export default class GradesDoughnut extends Component {
 
         gradientColors.forEach( function( item ){
             if(item.start === "#FFF") {
-                let gradient = myChartRef.createLinearGradient(75, 75, 0, 0);
+                let gradient = myChartRef.createLinearGradient(75, 75, graphWidth / 3, 0);
                 gradient.addColorStop(0, item.start);
                 gradient.addColorStop(1, item.end);
                 gradients.push(gradient);
             } else {
-                let gradient = myChartRef.createLinearGradient(85, 75, 120, 130);
+                let gradient = myChartRef.createLinearGradient(97, 97, graphWidth / 3, 140);
                 gradient.addColorStop(0, item.start);
                 gradient.addColorStop(1, item.end);
                 gradients.push(gradient);
