@@ -16,42 +16,47 @@ export const userData = {
                 credits: 1,
                 time: "",
                 days: "",
-                grade: ""
+                grade: "84"
             },
             {
                 shortName: "COMM 101",
                 name: "Public Speaking",
                 credits: 2,
                 time: "",
-                days: ""
+                days: "",
+                grade: "94"
             },
             {
                 shortName: "ISEM 101",
                 name: "Integrated Seminar",
                 credits: 3,
                 time: "",
-                days: ""
+                days: "",
+                grade: "87"
             },
             {
                 shortName: "ENGL 101",
                 name: "Introduction to College Writing",
                 credits: 3,
                 time: "",
-                days: ""
+                days: "",
+                grade: "97"
             },
             {
-                shortName: "Elective",
-                name: "",
+                shortName: "ASTR 101",
+                name: "Introduction to Astronomy",
                 credits: 3,
                 time: "",
-                days: ""
+                days: "",
+                grade: "95"
             },
             {
                 shortName: "Math 143",
                 name: "Pre-Calculus and Analytic Geometry",
                 credits: 3,
                 time: "",
-                days: ""
+                days: "",
+                grade: "81"
             }
         ]
     }
