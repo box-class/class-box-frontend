@@ -45,6 +45,11 @@ export const Buttons = styled.button`
         box-shadow: 5px 10px 5px #EEE;
         font-size: 18px;
     `}
+
+    ${({centered}) => centered && `
+        margin: 5% 10%;
+        text-align: center;
+    `}
 `
 
 export const ChartArea = styled.div`

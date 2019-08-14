@@ -2,3 +2,11 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+input:active {
+    outline: none;
+}
+
+input, textarea {
+    outline: none;
+}

@@ -52,7 +52,9 @@ export default function StudentNav() {
 
           <ListItem button>
             <ListItemText>
+              <Link to='/student/courses'>
                 Your Courses
+              </Link>
             </ListItemText>
           </ListItem>
 
@@ -72,7 +74,9 @@ export default function StudentNav() {
 
           <ListItem button>
             <ListItemText>
-                Teacher Updates
+                <Link to='/student/teacherUpdates'>
+                  Teacher Updates
+                </Link>
             </ListItemText>
           </ListItem>
 

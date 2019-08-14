@@ -3,5 +3,6 @@ export const colors = {
     pink: '#FF6A89',
     green: '#43DDC1',
     yellow: '#F8BB56',
-    white: '#fff'
+    white: '#fff',
+    gray: '#EEE'
 }

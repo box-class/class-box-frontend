@@ -11,52 +11,71 @@ export const userData = {
         gpa: "3.4",
         currentCourses: [
             {
+                courseId: "12353",
                 shortName: "AGEC 101",
                 name: "The Business of Agriculture",
                 credits: 1,
-                time: "",
-                days: "",
-                grade: "84"
+                time: "8:00AM - 8:50AM",
+                days: "T",
+                grade: "84",
+                feed: [
+                    {
+                        title: 'The History of Corn',
+                        postedDate: '08/14/2019',
+                        required: true,
+                        thumbnail: 'https://www.shutterstock.com/image-photo/beautiful-morning-sunrise-over-corn-field-613739555'
+                    }
+                ]
             },
             {
+                courseId: "12354",
                 shortName: "COMM 101",
                 name: "Public Speaking",
                 credits: 2,
-                time: "",
-                days: "",
-                grade: "94"
+                time: "9:00AM - 9:50AM",
+                days: "TTH",
+                grade: "94",
+                feed: []
             },
             {
+                courseId: "12355",
                 shortName: "ISEM 101",
                 name: "Integrated Seminar",
                 credits: 3,
-                time: "",
-                days: "",
-                grade: "87"
+                time: "8:00AM - 8:50AM",
+                days: "MWF",
+                grade: "87",
+                feed: []
             },
             {
+                courseId: "12356",
                 shortName: "ENGL 101",
                 name: "Introduction to College Writing",
                 credits: 3,
-                time: "",
-                days: "",
-                grade: "97"
+                time: "10:00AM - 10:50AM",
+                days: "MWF",
+                grade: "97",
+                feed: []
             },
             {
+                courseId: '11352',
                 shortName: "ASTR 101",
                 name: "Introduction to Astronomy",
                 credits: 3,
-                time: "",
-                days: "",
-                grade: "95"
+                time: "1:30PM - 2:50PM",
+                days: "MWF",
+                grade: "95",
+                feed: []
             },
             {
+                courseId: "12357",
                 shortName: "Math 143",
                 name: "Pre-Calculus and Analytic Geometry",
                 credits: 3,
-                time: "",
-                days: "",
-                grade: "81"
+                time: "12:30PM - 1:20PM",
+                days: "MWF",
+                grade: "81",
+                feed: []
             }
         ]
     }
@@ -74,7 +93,29 @@ export const courseData =
                 credits: 1,
                 time: "8:00AM - 8:50AM",
                 days: "T",
-                prereq: []
+                prereq: [],
+                feed: [
+                    {
+                        id: '1234',
+                        title: 'The History of Corn',
+                        postedDate: '08/14/2019',
+                        required: true,
+                        thumbnail: 'https://picsum.photos/150',
+                        article: 'https://www.nytimes.com/2010/05/25/science/25creature.html',
+                        assignmentDesc: 'Read the article and write a brief 3 paragraph summary',
+                        dueDate: '08/20/19'
+                    },
+                    {
+                        id: '1235',
+                        title: 'Food and Nutrition in the Aftermath of Nuclear War',
+                        postedDate: '08/14/2019',
+                        required: true,
+                        thumbnail: 'https://picsum.photos/150',
+                        article: 'https://www.ncbi.nlm.nih.gov/books/NBK219173/',
+                        assignmentDesc: 'Read the article and write a brief 3 paragraph summary',
+                        dueDate: '08/20/19'
+                    }
+                ]
             },
             {
                 courseId: "12354",
@@ -83,7 +124,8 @@ export const courseData =
                 credits: 2,
                 time: "9:00AM - 9:50AM",
                 days: "TTH",
-                prereq: []
+                prereq: [],
+                feed: []
             },
             {
                 courseId: "12355",
@@ -92,7 +134,8 @@ export const courseData =
                 credits: 3,
                 time: "8:00AM - 8:50AM",
                 days: "MWF",
-                prereq: []
+                prereq: [],
+                feed: []
             },
             {
                 courseId: "12356",
@@ -101,7 +144,8 @@ export const courseData =
                 credits: 3,
                 time: "10:00AM - 10:50AM",
                 days: "MWF",
-                prereq: []
+                prereq: [],
+                feed: []
             },
             {
                 courseId: "12357",
@@ -110,7 +154,8 @@ export const courseData =
                 credits: 3,
                 time: "12:30PM - 1:20PM",
                 days: "MWF",
-                prereq: []
+                prereq: [],
+                feed: []
             },
             {
                 courseId: "12358",
@@ -119,7 +164,8 @@ export const courseData =
                 credits: 3,
                 time: "1:30PM - 2:30PM",
                 days: "MWF",
-                prereq: []
+                prereq: [],
+                feed: []
             },
             {
                 courseId: "12359",
@@ -128,7 +174,8 @@ export const courseData =
                 credits: 4,
                 time: "8:00AM - 9:50AM",
                 days: "MWF",
-                prereq: []
+                prereq: [],
+                feed: []
             },
             {
                 courseId: "12360",
@@ -137,7 +184,8 @@ export const courseData =
                 credits: 4,
                 time: "8:00AM - 9:50AM",
                 days: "MWF",
-                prereq: []
+                prereq: [],
+                feed: []
             },
             {
                 courseId: "12361",
@@ -146,7 +194,8 @@ export const courseData =
                 credits: 3,
                 time: "10:30AM - 11:50AM",
                 days: "MWF",
-                prereq: []
+                prereq: [],
+                feed: []
             },
             {
                 courseId: "12362",
@@ -155,7 +204,8 @@ export const courseData =
                 credits: 3,
                 time: "10:30AM - 11:50AM",
                 days: "MWF",
-                prereq: []
+                prereq: [],
+                feed: []
             },
             {
                 courseId: "12363",
@@ -164,7 +214,8 @@ export const courseData =
                 credits: 4,
                 time: "1:20PM - 3:10PM",
                 days: "MWF",
-                prereq: []
+                prereq: [],
+                feed: []
             },
             {
                 courseId: "12364",
@@ -173,7 +224,8 @@ export const courseData =
                 credits: 3,
                 time: "1:20PM - 3:10PM",
                 days: "MWF",
-                prereq: ["MATH 143", "ECON 202"]
+                prereq: ["MATH 143", "ECON 202"],
+                feed: []
             },
             {
                 courseId: "12365",
@@ -182,7 +234,8 @@ export const courseData =
                 credits: 3,
                 time: "3:30PM - 4:50PM",
                 days: "MWF",
-                prereq: []
+                prereq: [],
+                feed: []
             },
             {
                 courseId: "12366",
@@ -191,7 +244,8 @@ export const courseData =
                 credits: 3,
                 time: "8:00AM - 9:20AM",
                 days: "TTH",
-                prereq: []
+                prereq: [],
+                feed: []
             },
             {
                 courseId: "12367",
@@ -200,7 +254,8 @@ export const courseData =
                 credits: 3,
                 time: "8:00AM - 9:20AM",
                 days: "TTH",
-                prereq: []
+                prereq: [],
+                feed: []
             },
             {
                 courseId: "12369",
@@ -209,7 +264,8 @@ export const courseData =
                 credits: 3,
                 time: "9:50AM - 11:30AM",
                 days: "TTH",
-                prereq: []
+                prereq: [],
+                feed: []
             },
             {
                 courseId: "12370",
@@ -218,7 +274,8 @@ export const courseData =
                 credits: 3,
                 time: "8:00AM - 9:30AM",
                 days: "MWF",
-                prereq: []
+                prereq: [],
+                feed: []
             },
             {
                 courseId: "12371",
@@ -227,7 +284,8 @@ export const courseData =
                 credits: 3,
                 time: "9:50AM - 11:30AM",
                 days: "MWF",
-                prereq: []
+                prereq: [],
+                feed: []
             },
             {
                 courseId: "12372",
@@ -236,7 +294,8 @@ export const courseData =
                 credits: 3,
                 time: "1:20PM - 2:30PM",
                 days: "MWF",
-                prereq: ["ACCT 201"]
+                prereq: ["ACCT 201"],
+                feed: []
             },
             {
                 courseId: "12373",
@@ -245,7 +304,8 @@ export const courseData =
                 credits: 3,
                 time: "3:00PM - 4:20PM",
                 days: "MWF",
-                prereq: []
+                prereq: [],
+                feed: []
             },
             {
                 courseId: "12374",
@@ -254,7 +314,8 @@ export const courseData =
                 credits: 3,
                 time: "4:30PM - 5:20PM",
                 days: "MWF",
-                prereq: ["MATH 108, 143, 160 or 170"]
+                prereq: ["MATH 108, 143, 160 or 170"],
+                feed: []
             },
             {
                 courseId: "12375",
@@ -263,7 +324,8 @@ export const courseData =
                 credits: 3,
                 time: "8:00AM - 9:20AM",
                 days: "TTH",
-                prereq: ["ECON 202", "MATH 143"]
+                prereq: ["ECON 202", "MATH 143"],
+                feed: []
             },
             {
                 courseId: "12376",
@@ -272,7 +334,8 @@ export const courseData =
                 credits: 3,
                 time: "9:50AM - 11:30AM",
                 days: "TTH",
-                prereq: []
+                prereq: [],
+                feed: []
             },
             {
                 courseId: "12377",
@@ -281,7 +344,8 @@ export const courseData =
                 credits: 3,
                 time: "1:00PM - 1:50PM",
                 days: "TTH",
-                prereq: []
+                prereq: [],
+                feed: []
             },
             {
                 courseId: "12378",
@@ -290,7 +354,8 @@ export const courseData =
                 credits: 3,
                 time: "2:00PM - 2:50PM",
                 days: "TTH",
-                prereq: []
+                prereq: [],
+                feed: []
             },
             {
                 courseId: "12379",
@@ -299,7 +364,8 @@ export const courseData =
                 credits: 3,
                 time: "8:00AM - 9:20AM",
                 days: "MWF",
-                prereq: []
+                prereq: [],
+                feed: []
             },
             {
                 courseId: "12380",
@@ -308,7 +374,8 @@ export const courseData =
                 credits: 3,
                 time: "9:50AM - 11:30AM",
                 days: "MWF",
-                prereq: []
+                prereq: [],
+                feed: []
             },
             {
                 courseId: "12381",
@@ -317,7 +384,8 @@ export const courseData =
                 credits: 1,
                 time: "1:00PM - 1:50PM",
                 days: "TTH",
-                prereq: ["ENGL 102"]
+                prereq: ["ENGL 102"],
+                feed: []
             },
             {
                 courseId: "12382",
@@ -326,7 +394,8 @@ export const courseData =
                 credits: 3,
                 time: "2:00PM - 2:50PM",
                 days: "MWF",
-                prereq: ["AGEC 301", "AGEC 302", "ACCT 201", "ACCT 202"]
+                prereq: ["AGEC 301", "AGEC 302", "ACCT 201", "ACCT 202"],
+                feed: []
             },
             {
                 courseId: "12383",
@@ -335,7 +404,8 @@ export const courseData =
                 credits: 3,
                 time: "3:00PM - 3:50PM",
                 days: "MWF",
-                prereq: []
+                prereq: [],
+                feed: []
             }
         ],
     },
@@ -349,7 +419,8 @@ export const courseData =
                 credits: 2,
                 time: "8:00AM - 9:20AM",
                 days: "TTH",
-                prereq: []
+                prereq: [],
+                feed: []
             },
             {
                 courseId: "12355",
@@ -358,7 +429,8 @@ export const courseData =
                 credits: 3,
                 time: "9:50AM - 11:30AM",
                 days: "MWF",
-                prereq: []
+                prereq: [],
+                feed: []
             },
             {
                 courseId: "12356",
@@ -367,7 +439,8 @@ export const courseData =
                 credits: 3,
                 time: "1:00PM - 1:50PM",
                 days: "MWF",
-                prereq: []
+                prereq: [],
+                feed: []
             },
             {
                 courseId: "12357",
@@ -376,7 +449,8 @@ export const courseData =
                 credits: 3,
                 time: "2:00PM - 2:50PM",
                 days: "MWF",
-                prereq: []
+                prereq: [],
+                feed: []
             },
         ]
     }
