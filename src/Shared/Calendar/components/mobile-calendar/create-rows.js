@@ -25,7 +25,6 @@ export default class CreateRows extends Component {
     }
 
     render() {
-        console.log(this.state.clickedDate)
         return(
             <>
                 {this.props.rowData.row.map((day, i) => {

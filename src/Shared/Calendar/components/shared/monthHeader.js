@@ -27,7 +27,6 @@ export default class Month extends Component {
     }
 
     render() {
-        console.log(this.state.month)
         return(
             <CalendarHeaderWrap>
                 <HeaderWrap>

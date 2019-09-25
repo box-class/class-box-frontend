@@ -1,10 +1,14 @@
 import styled from "styled-components";
-import { colors } from '../Shared/variables';
+import { colors, media } from '../Shared/variables';
 
 
 export const CoursesWrap = styled.div`
     width: 100%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 
     h3 {
         width: 95%;
@@ -36,6 +40,11 @@ export const SCWrap = styled.div`
     align-content: center;
     justify-content: center;
     flex-wrap: wrap;
+
+    ${media.tablet} {
+        flex-direction: row;
+        width: 100%;
+    }
 `
 
 export const CourseWrap = styled.div`
@@ -48,12 +57,23 @@ export const CourseWrap = styled.div`
     border-radius: 5px;
     box-shadow: 2px 2px 2px lightgrey;
     margin-top: 20px;
+
+    ${media.tablet} {
+        width: 45%;
+        margin: 10px;
+    }
+
+    ${media.desktop} {
+        width: 25%;
+    }
+
+    ${media.largeDt} {
+        width: 22%;
+    }
 `
 
 export const Split = styled.div`
-    width: 70%;
-    margin: 20px auto 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    margin: 15px auto;
+    text-align: center;
+
 `

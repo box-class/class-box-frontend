@@ -30,7 +30,6 @@ const DescModal = (props) => {
                     <div>
                         <h3>Pre-Requisites:</h3>
                         <div>{props.course.prereq.map(pre => {
-                            console.log(pre)
                             return <p key={pre}>{pre}</p>
                         })}</div>
                     </div>

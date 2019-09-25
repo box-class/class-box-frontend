@@ -24,7 +24,6 @@ export default class StudentCourses extends Component {
     }
 
     render() {
-        console.log(this.state.courses)
         // TODO: when we click this it needs to go to that courses page and
         // show the user any past or present available work
         return(
@@ -38,11 +37,6 @@ export default class StudentCourses extends Component {
                         )
                     })}
                 </SCWrap>
-                {/*
-                    TODO: add calendar page using mobiscroll calendar
-                    https://demo.mobiscroll.com/react/eventcalendar/responsive-month-view#
-                    ***the responsive calendar w/ the mobi theme
-                */}
                 <Buttons large={true} centered={true}>
                     <Link to='/student/calendar'>
                         View On Calendar

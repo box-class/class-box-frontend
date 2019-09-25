@@ -1,3 +1,10 @@
+
+export const pLevel = {
+    admin: 1,
+    teacher: 2,
+    student: 3
+}
+
 export const userData = {
         studentId: "AB00001",
         firstName: "John",
@@ -8,7 +15,8 @@ export const userData = {
         major: "Agribusiness",
         startYear: "2017",
         projectedED: "2021",
-        gpa: "3.4",
+        gpa: 3.4,
+        gpaLastLogin: 3.2,
         currentCourses: [
             {
                 courseId: "12353",
@@ -77,6 +85,49 @@ export const userData = {
                 grade: "81",
                 feed: []
             }
+        ],
+        attemptedCourses: [],
+        schedule: [
+            {
+                id: 1,
+                task: 'AGEC 101',
+                days: [2],
+                repeats: true,
+                time: "8:00AM - 8:50AM",
+                startDate: new Date('09/17/2019'),
+                endDate: new Date('12/17/2019'),
+                dates: []
+            },
+            {
+                id: 2,
+                task: 'COMM 101',
+                days: [2, 4],
+                repeats: true,
+                time: "9:00AM - 9:50AM",
+                startDate: new Date('09/17/2019'),
+                endDate: new Date('12/17/2019'),
+                dates: []
+            },
+            {
+                id: 3,
+                task: 'ISEM 101',
+                days: [1, 3, 5],
+                repeats: true,
+                time: "8:00AM - 8:50AM",
+                startDate: new Date('09/16/2019'),
+                endDate: new Date('12/20/2019'),
+                dates: []
+            },
+            {
+                id: 4,
+                task: 'ENGL 101',
+                days: [1, 3, 5],
+                repeats: true,
+                time: "10:00AM - 10:50AM",
+                startDate: new Date('09/16/2019'),
+                endDate: new Date('12/20/2019'),
+                dates: []
+            }
         ]
     }
 
@@ -115,7 +166,16 @@ export const courseData =
                         assignmentDesc: 'Read the article and write a brief 3 paragraph summary',
                         dueDate: '08/20/19'
                     }
-                ]
+                ],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12354",
@@ -125,7 +185,16 @@ export const courseData =
                 time: "9:00AM - 9:50AM",
                 days: "TTH",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12355",
@@ -135,7 +204,16 @@ export const courseData =
                 time: "8:00AM - 8:50AM",
                 days: "MWF",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12356",
@@ -145,7 +223,16 @@ export const courseData =
                 time: "10:00AM - 10:50AM",
                 days: "MWF",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12357",
@@ -155,7 +242,16 @@ export const courseData =
                 time: "12:30PM - 1:20PM",
                 days: "MWF",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12358",
@@ -165,7 +261,16 @@ export const courseData =
                 time: "1:30PM - 2:30PM",
                 days: "MWF",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12359",
@@ -175,7 +280,16 @@ export const courseData =
                 time: "8:00AM - 9:50AM",
                 days: "MWF",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12360",
@@ -185,7 +299,16 @@ export const courseData =
                 time: "8:00AM - 9:50AM",
                 days: "MWF",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12361",
@@ -195,7 +318,16 @@ export const courseData =
                 time: "10:30AM - 11:50AM",
                 days: "MWF",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12362",
@@ -205,7 +337,16 @@ export const courseData =
                 time: "10:30AM - 11:50AM",
                 days: "MWF",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12363",
@@ -215,7 +356,16 @@ export const courseData =
                 time: "1:20PM - 3:10PM",
                 days: "MWF",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12364",
@@ -225,7 +375,16 @@ export const courseData =
                 time: "1:20PM - 3:10PM",
                 days: "MWF",
                 prereq: ["MATH 143", "ECON 202"],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12365",
@@ -235,7 +394,16 @@ export const courseData =
                 time: "3:30PM - 4:50PM",
                 days: "MWF",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12366",
@@ -245,7 +413,16 @@ export const courseData =
                 time: "8:00AM - 9:20AM",
                 days: "TTH",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12367",
@@ -255,7 +432,16 @@ export const courseData =
                 time: "8:00AM - 9:20AM",
                 days: "TTH",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12369",
@@ -265,7 +451,16 @@ export const courseData =
                 time: "9:50AM - 11:30AM",
                 days: "TTH",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12370",
@@ -275,7 +470,16 @@ export const courseData =
                 time: "8:00AM - 9:30AM",
                 days: "MWF",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12371",
@@ -285,7 +489,16 @@ export const courseData =
                 time: "9:50AM - 11:30AM",
                 days: "MWF",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12372",
@@ -295,7 +508,16 @@ export const courseData =
                 time: "1:20PM - 2:30PM",
                 days: "MWF",
                 prereq: ["ACCT 201"],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12373",
@@ -305,7 +527,16 @@ export const courseData =
                 time: "3:00PM - 4:20PM",
                 days: "MWF",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12374",
@@ -315,7 +546,16 @@ export const courseData =
                 time: "4:30PM - 5:20PM",
                 days: "MWF",
                 prereq: ["MATH 108, 143, 160 or 170"],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12375",
@@ -325,7 +565,16 @@ export const courseData =
                 time: "8:00AM - 9:20AM",
                 days: "TTH",
                 prereq: ["ECON 202", "MATH 143"],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12376",
@@ -335,7 +584,16 @@ export const courseData =
                 time: "9:50AM - 11:30AM",
                 days: "TTH",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12377",
@@ -345,7 +603,16 @@ export const courseData =
                 time: "1:00PM - 1:50PM",
                 days: "TTH",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12378",
@@ -355,7 +622,16 @@ export const courseData =
                 time: "2:00PM - 2:50PM",
                 days: "TTH",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12379",
@@ -365,7 +641,16 @@ export const courseData =
                 time: "8:00AM - 9:20AM",
                 days: "MWF",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12380",
@@ -375,7 +660,16 @@ export const courseData =
                 time: "9:50AM - 11:30AM",
                 days: "MWF",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12381",
@@ -385,7 +679,16 @@ export const courseData =
                 time: "1:00PM - 1:50PM",
                 days: "TTH",
                 prereq: ["ENGL 102"],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12382",
@@ -395,7 +698,16 @@ export const courseData =
                 time: "2:00PM - 2:50PM",
                 days: "MWF",
                 prereq: ["AGEC 301", "AGEC 302", "ACCT 201", "ACCT 202"],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12383",
@@ -405,7 +717,16 @@ export const courseData =
                 time: "3:00PM - 3:50PM",
                 days: "MWF",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             }
         ],
     },
@@ -420,7 +741,16 @@ export const courseData =
                 time: "8:00AM - 9:20AM",
                 days: "TTH",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12355",
@@ -430,7 +760,16 @@ export const courseData =
                 time: "9:50AM - 11:30AM",
                 days: "MWF",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12356",
@@ -440,7 +779,16 @@ export const courseData =
                 time: "1:00PM - 1:50PM",
                 days: "MWF",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
             {
                 courseId: "12357",
@@ -450,8 +798,55 @@ export const courseData =
                 time: "2:00PM - 2:50PM",
                 days: "MWF",
                 prereq: [],
-                feed: []
+                feed: [],
+                teacher: {
+                    name: 'Luke Skywalker',
+                    officeHours: {
+                        days: 'MWF',
+                        time: '5:30PM - 6:00PM'
+                    },
+                    email: 'Luke.Skywalker@school.com',
+                    officePhone: '111-111-1111'
+                }
             },
         ]
     }
     ]
+
+export const admins = [
+    {
+        userId: 'AD1111',
+        firstName: 'John',
+        lastName: 'Smith',
+        email: 'John.Smith@TXU.edu',
+        pLevel: pLevel.admin,
+        department: {
+            id: 1,
+            deptHead: 'AD1111',
+            teachers: [],
+            classes: []
+        },
+        employees: [],
+        requests: [],
+        schedule: []
+    }
+]
+
+export const teachers = [
+    {
+        userId: 'TR1111',
+        firstName: 'Elizabeth',
+        lastName: 'Hutch',
+        email: 'Elizabeth.Hutch@TXU.edu',
+        pLevel: pLevel.teacher,
+        department: {
+            id: 1,
+            deptHead: 'AD1111',
+            teachers: [],
+            classes: []
+        },
+        classes: [],
+        schedule: []
+    }
+]
+

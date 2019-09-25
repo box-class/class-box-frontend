@@ -11,21 +11,11 @@ export default class TeacherUpdates extends Component{
         }
     }
 
-    // change this to a new route with the courseId in the nav
-    getClassChoice = (obj) => {
-        console.log(obj)
-        this.setState({
-            ...this.state,
-            class: obj
-        });
-    }
-
     render() {
-        console.log(this.state.class)
         return(
             <>
                 <HomeNavBar />
-                <ClassChoice classes={ userData.currentCourses } getClassChoice={ this.getClassChoice } />
+                <ClassChoice classes={ userData.currentCourses } />
             </>
         )
     }

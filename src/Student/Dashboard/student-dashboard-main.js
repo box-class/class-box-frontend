@@ -8,7 +8,14 @@ import {
     ChartArea,
     Grade
 } from '../../Styles/Shared/reusable';
-import { GradesHeading } from '../../Styles/student-dashboard/student-dashboard';
+import {
+    GradesHeading,
+    LeftSide,
+    DashboardWrap,
+    RightSide
+ } from '../../Styles/student-dashboard/student-dashboard';
+import ScheduleMain from '../Schedule/schedule-main';
+import calendar from '../../assetts/calendar.png';
 
 export default class StudentDashboard extends Component {
     constructor(props) {
@@ -29,27 +36,41 @@ export default class StudentDashboard extends Component {
 
     render() {
         return (
-            <div>
+            <>
                 <StudentNav />
-                <GradesHeading>
-                    <img src={collection} alt="collection" />
-                    <h3>Grades:</h3>
-                </GradesHeading>
-                <ChartArea large={this.state.large}>
+                <DashboardWrap>
+                    <LeftSide>
+                        <div>
+                            <img src={calendar} alt='calendar icon' />
+                            <h3>Schedule:</h3>
+                            <ScheduleMain />
+                        </div>
 
-                    {userData.currentCourses.map(course => {
-                        return (
-                        <ChartWrap key={course.shortName} large={this.state.large}>
-                            <h2>{course.shortName}</h2>
-                            <GradesDoughnut
-                                course={course}
-                                grade={course.grade}
-                            />
-                            <Grade>{course.grade}%</Grade>
-                        </ChartWrap>
-                    )})}
-                </ChartArea>
-            </div>
+                        <GradesHeading>
+                            <img src={collection} alt="collection" />
+                            <h3>Grades:</h3>
+                        </GradesHeading>
+                        <ChartArea large={this.state.large}>
+
+                            {userData.currentCourses.map(course => {
+                                return (
+                                <ChartWrap key={course.shortName} large={this.state.large}>
+                                    <h2>{course.shortName}</h2>
+                                    <GradesDoughnut
+                                        course={course}
+                                        grade={course.grade}
+                                    />
+                                    <Grade>{course.grade}%</Grade>
+                                </ChartWrap>
+                            )})}
+                        </ChartArea>
+                    </LeftSide>
+
+                    <RightSide>
+                        <h3><span>Class </span>Updates</h3>
+                    </RightSide>
+                </DashboardWrap>
+            </>
         )
     }
 }

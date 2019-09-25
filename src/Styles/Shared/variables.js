@@ -6,3 +6,10 @@ export const colors = {
     white: '#fff',
     gray: '#EEE'
 }
+
+export const media = {
+    modern: '@media(min-width: 1920px)',
+    largeDt: '@media(min-width: 1300px)',
+    desktop: '@media(min-width: 1000px)',
+    tablet: '@media(min-width: 600px)',
+  };

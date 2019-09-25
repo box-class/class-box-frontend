@@ -5,7 +5,8 @@ import {
     SignupFormWrap,
     WelcomeWrap,
     InputFields,
-    ButtonWrap
+    ButtonWrap,
+    WelcomeContent
 } from '../../Styles/Signup/signup';
 import { Buttons } from '../../Styles/Shared/reusable';
 import { Link } from 'react-router-dom';
@@ -39,6 +40,9 @@ export default class StudentSignUp extends Component {
             <SignupWrap>
                 <SignupFormWrap>
                     <div>
+                        <h1 className="title">Get Started:</h1>
+                    </div>
+                    <div>
                         <p>SID:</p>
                         <InputFields
                             className="small"
@@ -65,6 +69,7 @@ export default class StudentSignUp extends Component {
                         />
                         <InputFields
                             name="dob"
+                            className="medium"
                             placeholder="Date of Birth"
                             value={this.state.dob}
                             onChange={this.handleChange}
@@ -95,7 +100,7 @@ export default class StudentSignUp extends Component {
                         <InputFields
                             className="small"
                             name="zipcode"
-                            placeholder="Zip Code"
+                            placeholder="Zip"
                             value={this.state.zipcode}
                             onChange={this.handleChange}
                         />
@@ -127,10 +132,12 @@ export default class StudentSignUp extends Component {
                 </SignupFormWrap>
 
                 <WelcomeWrap>
-                    <h3>WELCOME TO</h3>
-                    <img src={box} alt="box" />
-                    <h1>CLASS BOX</h1>
-                    <p>Designed to make your college experience simpler.</p>
+                    <WelcomeContent>
+                        <h3>WELCOME TO</h3>
+                        <img src={box} alt="box" />
+                        <h1>CLASS BOX</h1>
+                        <p>Designed to make your college experience simpler.</p>
+                    </WelcomeContent>
                 </WelcomeWrap>
             </SignupWrap>
         )

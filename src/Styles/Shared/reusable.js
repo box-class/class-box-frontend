@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from '../Shared/variables';
+import { colors, media } from '../Shared/variables';
 
 export const SearchBarStyle = styled.div`
     display: flex;
@@ -44,11 +44,28 @@ export const Buttons = styled.button`
         padding: 15px;
         box-shadow: 5px 10px 5px #EEE;
         font-size: 18px;
+
+        ${media.tablet} {
+            width: 60%;
+        }
+
+        ${media.desktop} {
+            width: 50%;
+        }
+
+        ${media.largeDt} {
+            width: 30%;
+        }
+
+        ${media.modern} {
+            width: 20%;
+        }
     `}
 
     ${({centered}) => centered && `
-        margin: 5% 10%;
-        text-align: center;
+        margin: 40px auto;
+        justify-self: center;
+        align-self: center;
     `}
 `
 
@@ -70,22 +87,28 @@ export const ChartArea = styled.div`
         margin: 20px auto;
         justify-content: center;
         align-content: center;
+
+        ${media.tablet} {
+            flex-direction: row;
+        }
     `}
 `
 
 export const ChartWrap = styled.div`
     width: 45%;
     display: flex;
+    background-color: #FFF;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    border: 1px solid #eee;
-    margin: 8px;
+    border: 1px solid #FFF;
+    margin: 8px auto;
     padding: 10px;
-    border-radius: 15px;
-    box-shadow: 4px 4px 4px #eee;
+    border-radius: 5px;
+    box-shadow: 3px 3px 20px lightgray;
 
     h2 {
+        padding-bottom: 10px;
         text-align: center;
         font-size: 18px;
         color: ${colors.primary};
@@ -95,6 +118,18 @@ export const ChartWrap = styled.div`
 
     ${({large}) => large && `
         width: 75%;
+
+        ${media.tablet} {
+            width: 40%;
+        }
+
+        ${media.desktop} {
+            width: 40%;
+        }
+
+        ${media.largeDt} {
+            width: 30%;
+        }
     `}
 `
 
@@ -106,4 +141,35 @@ export const Grade = styled.h3`
     color: ${colors.pink};
     font-size: 25px;
     font-weight: bold;
+`
+
+export const LineGraphWrap = styled.div`
+    display: none;
+
+    ${media.tablet} {
+        display: inline-block;
+        width: 100%;
+        margin: 20px auto;
+        h3 {
+            align-self: center;
+            padding-left: 10px;
+            color: ${colors.primary};
+            font-size: 25px;
+        }
+    }
+`
+
+export const LineGraph = styled.div`
+    width: 95%;
+    margin: 20px auto;
+    background-color: #FFF;
+    border: 1px solid #FFF;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 30px lightgray;
+
+    ${media.largeDt} {
+        width: 90%;
+
+    }
 `

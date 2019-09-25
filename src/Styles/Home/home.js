@@ -19,7 +19,7 @@ export const JumboWrap = styled.div`
         z-index: 1000;
         bottom: 250px;
         left: 20px;
-        font-size: 42px;
+        font-size: 38px;
         font-weight: bold;
         color: #FFF;
         line-height: 1.5em;

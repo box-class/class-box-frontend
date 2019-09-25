@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from '../Shared/variables';
+import { colors, media } from '../Shared/variables';
 
 export const LoginWrap = styled.div`
     width: 100%;
@@ -35,6 +35,14 @@ export const LoginFormWrap = styled.div`
     h4 {
         color: ${colors.primary};
         margin-top: 45px;
+    }
+
+    ${media.tablet} {
+        width: 50%;
+    }
+
+    ${media.largeDt} {
+        width: 30%;
     }
 `
 
