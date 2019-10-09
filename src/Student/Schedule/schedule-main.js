@@ -66,7 +66,7 @@ const ScheduleMain = (props) => {
 
     console.log(schedule)
     return (
-        <div>
+        <div className="scheduleItems">
             <ScheduleItems data={schedule && schedule} />
         </div>
     )

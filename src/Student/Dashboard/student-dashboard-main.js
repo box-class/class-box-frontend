@@ -14,6 +14,7 @@ import {
     DashboardWrap,
     RightSide
  } from '../../Styles/student-dashboard/student-dashboard';
+import { ScheduleArea, ScheduleHeader } from '../../Styles/Shared/schedule';
 import ScheduleMain from '../Schedule/schedule-main';
 import calendar from '../../assetts/calendar.png';
 
@@ -40,16 +41,19 @@ export default class StudentDashboard extends Component {
                 <StudentNav />
                 <DashboardWrap>
                     <LeftSide>
-                        <div>
-                            <img src={calendar} alt='calendar icon' />
-                            <h3>Schedule:</h3>
+                        <ScheduleArea>
+                            <ScheduleHeader>
+                                <img src={calendar} alt='calendar icon' />
+                                <h3>Todays Schedule:</h3>
+                            </ScheduleHeader>
                             <ScheduleMain />
-                        </div>
+                        </ScheduleArea>
 
                         <GradesHeading>
                             <img src={collection} alt="collection" />
                             <h3>Grades:</h3>
                         </GradesHeading>
+                        {/* #TODO: extract to it's own component*/}
                         <ChartArea large={this.state.large}>
 
                             {userData.currentCourses.map(course => {

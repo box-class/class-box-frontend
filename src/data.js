@@ -91,7 +91,7 @@ export const userData = {
             {
                 id: 1,
                 task: 'AGEC 101',
-                days: [2],
+                days: [2, 4],
                 repeats: true,
                 time: "8:00AM - 8:50AM",
                 startDate: new Date('09/17/2019'),
@@ -126,6 +126,26 @@ export const userData = {
                 time: "10:00AM - 10:50AM",
                 startDate: new Date('09/16/2019'),
                 endDate: new Date('12/20/2019'),
+                dates: []
+            },
+            {
+                id: 5,
+                task: 'TEST 101',
+                days: [2, 4],
+                repeats: true,
+                time: "10:00AM - 10:50AM",
+                startDate: new Date('09/17/2019'),
+                endDate: new Date('12/17/2019'),
+                dates: []
+            },
+            {
+                id: 6,
+                task: 'TEST 102',
+                days: [2, 4],
+                repeats: true,
+                time: "11:00AM - 11:50AM",
+                startDate: new Date('09/17/2019'),
+                endDate: new Date('12/17/2019'),
                 dates: []
             }
         ]
