@@ -12,8 +12,14 @@ import {
 export default class ClassChoice extends Component{
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            choice: ""
+        }
     }
+
+    getClassChoice = (choice) => {
+        console.log(choice);
+    };
 
     render() {
         return(
@@ -22,7 +28,7 @@ export default class ClassChoice extends Component{
                 <h3>Choose a class:</h3>
                 {this.props.classes.map((course) => {
                     return(
-                        <Class key={course.courseId} course={course} handleClick={this.props.getClassChoice} />
+                        <Class key={course.courseId} course={course} handleClick={this.getClassChoice} />
                     )
                 })}
             </TeacherUpdateWrap>

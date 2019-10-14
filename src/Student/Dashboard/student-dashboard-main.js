@@ -17,6 +17,7 @@ import {
 import { ScheduleArea, ScheduleHeader } from '../../Styles/Shared/schedule';
 import ScheduleMain from '../Schedule/schedule-main';
 import calendar from '../../assetts/calendar.png';
+import ClassUpdatesTray from '../ClassUpdatesTray/class-updates';
 
 export default class StudentDashboard extends Component {
     constructor(props) {
@@ -72,6 +73,7 @@ export default class StudentDashboard extends Component {
 
                     <RightSide>
                         <h3><span>Class </span>Updates</h3>
+                        <ClassUpdatesTray />
                     </RightSide>
                 </DashboardWrap>
             </>
