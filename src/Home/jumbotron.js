@@ -1,5 +1,5 @@
 import React from 'react';
-import jumbo from '../assetts/jumbotron.jpg';
+// import jumbo from '../assetts/jumbotron.jpg';
 import { JumboWrap } from '../Styles/Home/home';
 
 const JumboTron = (props) => {
