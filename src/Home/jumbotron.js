@@ -6,7 +6,7 @@ const JumboTron = (props) => {
     return(
         <JumboWrap>
             <div>
-                <img src={jumbo} alt="student behind books" />
+                {/* <img src={jumbo} alt="student behind books" /> */}
                 <div>
                     <h1 className="tagline">School is hard, keeping track of your grades shouldn't be...</h1>
                 </div>
