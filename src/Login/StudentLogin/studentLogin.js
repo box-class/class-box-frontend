@@ -14,7 +14,7 @@ export default class StudentLogin extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            SID: "",
+            email: "",
             password: ""
         }
     }
@@ -40,8 +40,8 @@ export default class StudentLogin extends Component {
                     <Form>
                         <InputFields
                             name="SID"
-                            placeholder="Student ID"
-                            value={this.state.SID}
+                            placeholder="Email Address"
+                            value={this.state.email}
                             onChange={this.handleChange}
                         />
                         <InputFields
