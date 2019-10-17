@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import HomeNavBar from '../../Shared/Nav/StudentNavBar';
+import StudentNavBar from '../../Shared/Nav/StudentNavBar';
 import { userData } from '../../data';
 import ClassChoice from './class-choice';
 
@@ -14,7 +14,7 @@ export default class TeacherUpdates extends Component{
     render() {
         return(
             <>
-                <HomeNavBar />
+                <StudentNavBar />
                 <ClassChoice classes={ userData.currentCourses } />
             </>
         )

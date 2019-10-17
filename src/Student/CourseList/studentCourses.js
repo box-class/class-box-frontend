@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import StudentNav from '../../Shared/Nav/StudentNavBar';
+import StudentNavBar from '../../Shared/Nav/StudentNavBar';
 import {userData} from '../../data';
 import { Link } from 'react-router-dom';
 import StudentCourse from './course';
@@ -28,7 +28,7 @@ export default class StudentCourses extends Component {
         // show the user any past or present available work
         return(
             <CoursesWrap>
-                <StudentNav />
+                <StudentNavBar />
                 <h4>Your current courses:</h4>
                 <SCWrap>
                     {this.state.courses.map(course => {

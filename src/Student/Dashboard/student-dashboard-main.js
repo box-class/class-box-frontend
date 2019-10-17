@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import StudentNavBar from '../../Shared/Nav/StudentNavBar';
-import {userData} from '../../data';
+import { userData } from '../../data';
 import {
     DashboardWrap,
  } from '../../Styles/student-dashboard/student-dashboard';
