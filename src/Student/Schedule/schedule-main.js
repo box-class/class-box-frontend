@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { userData } from '../../data';
 import ScheduleItems from './schedule-items';
 
@@ -7,23 +7,7 @@ const ScheduleMain = (props) => {
     let todaysDate = new Date();
     todaysDate = `${todaysDate.getMonth()}/${todaysDate.getDate()}/${todaysDate.getFullYear()}`
 
-    useEffect(() => {
-        initSchedule()
-    }, []);
-
-    const initSchedule = () => {
-        userData.schedule.map((item, index) => {
-            return getFullListOfDates(item.startDate, item.endDate, index)
-        });
-        let today = getTodaysSchedule();
-        let tempTasks = []
-        today.forEach(task => {
-            tempTasks.push(getTasks(task.id))
-        });
-        setSchedule(tempTasks)
-    }
-
-    const getFullListOfDates = (start, end, index) => {
+    const getFullListOfDates = useCallback((start, end, index) => {
         const interval = 1000 * 60 * 60 * 24;
         const duration = end - start;
         const steps = duration / interval;
@@ -34,9 +18,9 @@ const ScheduleMain = (props) => {
             })
             return userData.schedule[index].dates.push(newDates)
         })
-    }
+    }, []);
 
-    const getTodaysSchedule = () => {
+    const getTodaysSchedule = useCallback(() => {
         const todays = userData.schedule.map(item => {
             let dates = item.dates.map(date => {
                 const dateFinal = date.filter(d => {
@@ -55,7 +39,7 @@ const ScheduleMain = (props) => {
             return x.date.length > 0
         })
         return finalDates
-    }
+    }, [todaysDate]);
 
     const getTasks = (id) => {
         let tasks = userData.schedule.filter(task => {
@@ -64,7 +48,28 @@ const ScheduleMain = (props) => {
         return tasks
     }
 
-    console.log(schedule)
+    const initSchedule = useCallback(() => {
+        let tempTasks = [];
+
+        userData.schedule.map((item, index) => {
+            return getFullListOfDates(item.startDate, item.endDate, index);
+        });
+
+        let today = getTodaysSchedule();
+
+        today.forEach(task => {
+            tempTasks.push(getTasks(task.id));
+        });
+        setSchedule(tempTasks);
+    }, [
+        getFullListOfDates,
+        getTodaysSchedule
+    ]);
+
+    useEffect(() => {
+        initSchedule();
+    }, [initSchedule]);
+
     return (
         <div className="scheduleItems">
             <ScheduleItems data={schedule && schedule} />
