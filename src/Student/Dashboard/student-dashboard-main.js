@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import StudentNav from '../../Shared/Nav/studentNav/student-nav';
+import StudentNavBar from '../../Shared/Nav/StudentNavBar';
 import GradesDoughnut from '../../Charts/Doughnut/grades';
 import collection from '../../assetts/collection.png';
 import {userData} from '../../data';
@@ -39,7 +39,7 @@ export default class StudentDashboard extends Component {
     render() {
         return (
             <>
-                <StudentNav />
+                <StudentNavBar />
                 <DashboardWrap>
                     <LeftSide>
                         <ScheduleArea>
