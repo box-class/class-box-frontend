@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, media } from '../Shared/variables';
+import { colors } from '../Shared/variables';
 
 export const ScheduleArea = styled.div`
     width: 100%;

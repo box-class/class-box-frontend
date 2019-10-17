@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, media } from '../Shared/variables';
+// import { colors, media } from '../Shared/variables';
 
 export const ClassUpdatesWrap = styled.div`
     width: 95%;
