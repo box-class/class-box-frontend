@@ -31,7 +31,7 @@ export const userData = {
                         title: 'The History of Corn',
                         postedDate: '08/14/2019',
                         required: true,
-                        thumbnail: 'https://www.shutterstock.com/image-photo/beautiful-morning-sunrise-over-corn-field-613739555'
+                        thumbnail: null
                     }
                 ]
             },

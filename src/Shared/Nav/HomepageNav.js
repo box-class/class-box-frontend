@@ -1,9 +1,16 @@
 import React from 'react';
 import { NavWrap, LogoWrap, MenuWrap } from '../../Styles/Shared/nav';
 import box from '../../assetts/box.png';
-import HomePageNavMenu from './popOutMenu';
+import PopOutNavMenu from './PopOutNavMenu';
 
-const HomeNavBar = (props) => {
+
+const HomepageNav = (props) => {
+    const menuData = [
+        {text: 'Student Login', url: '/login/student'},
+        {text: 'Teacher Login', url: '/login/teacher'},
+        {text: 'Student Sign Up', url: '/signup/student'},
+    ]
+
     return(
         <NavWrap>
             <LogoWrap>
@@ -11,10 +18,10 @@ const HomeNavBar = (props) => {
                 <h1>CLASS BOX</h1>
             </LogoWrap>
             <MenuWrap>
-                <HomePageNavMenu />
+                <PopOutNavMenu menuData={menuData} />
             </MenuWrap>
         </NavWrap>
     )
 }
 
-export default HomeNavBar
+export default HomepageNav

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import StudentNav from '../Nav/studentNav/student-nav';
+import StudentNav from '../Nav/StudentNavBar';
 import DesktopCalendar from './components/desktop-calendar/desktop-calendar';
 import MobileCalendar from './components/mobile-calendar/mobile-calendar';
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import HomeNavBar from '../../../Shared/Nav/studentNav/student-nav';
+import HomeNavBar from '../../../Shared/Nav/StudentNavBar';
 import { courseData, userData } from '../../../data';
 import {
     TurnInWrap,

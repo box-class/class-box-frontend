@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import StudentNav from '../../Shared/Nav/studentNav/student-nav';
+import StudentNav from '../../Shared/Nav/StudentNavBar';
 import {userData} from '../../data';
 import { Link } from 'react-router-dom';
 import StudentCourse from './course';

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { courseData } from '../../data';
-import HomeNavBar from '../../Shared/Nav/studentNav/student-nav';
+import HomeNavBar from '../../Shared/Nav/StudentNavBar';
 import Feeds from './feeds';
 
 export default class ClassFeed extends Component{

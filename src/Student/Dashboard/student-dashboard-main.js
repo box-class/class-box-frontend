@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import StudentNav from '../../Shared/Nav/studentNav/student-nav';
+import StudentNavBar from '../../Shared/Nav/StudentNavBar';
 import GradesDoughnut from '../../Charts/Doughnut/grades';
 import collection from '../../assetts/collection.png';
 import {userData} from '../../data';
@@ -17,6 +17,7 @@ import {
 import { ScheduleArea, ScheduleHeader } from '../../Styles/Shared/schedule';
 import ScheduleMain from '../Schedule/schedule-main';
 import calendar from '../../assetts/calendar.png';
+import ClassUpdatesTray from '../ClassUpdatesTray/class-updates';
 
 export default class StudentDashboard extends Component {
     constructor(props) {
@@ -38,7 +39,7 @@ export default class StudentDashboard extends Component {
     render() {
         return (
             <>
-                <StudentNav />
+                <StudentNavBar />
                 <DashboardWrap>
                     <LeftSide>
                         <ScheduleArea>
@@ -72,6 +73,7 @@ export default class StudentDashboard extends Component {
 
                     <RightSide>
                         <h3><span>Class </span>Updates</h3>
+                        <ClassUpdatesTray />
                     </RightSide>
                 </DashboardWrap>
             </>

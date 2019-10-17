@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CourseList from './courses';
-import HomeNavBar from '../Shared/Nav/studentNav/student-nav';
+import HomeNavBar from '../Shared/Nav/StudentNavBar';
 import SearchBar from './searchBar/searchbar';
 import {courseData, userData} from '../data';
 

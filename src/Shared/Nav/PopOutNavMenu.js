@@ -7,18 +7,25 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import menu from '../../assetts/menu.png';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { SET_LOGGEDIN_STATUS } from '../../Actions/AuthActions';
+
+// reusable menu component
+// props require an array of objects with shape:
+// {text: 'Student Login', url: '/login/student'}
 
 const useStyles = makeStyles({
-  list: {
-    width: 250,
-  },
-  fullList: {
-    width: 'auto',
-  },
-});
+    list: {
+      width: 250,
+    },
+    fullList: {
+      width: 'auto',
+    },
+  });
 
-export default function HomePageNavMenu() {
+const PopOutNavMenu = (props) => {
   const classes = useStyles();
+  const dispatch = useDispatch();
   const [state, setState] = React.useState({
     top: false,
     left: false,
@@ -34,6 +41,16 @@ export default function HomePageNavMenu() {
     setState({ ...state, [side]: open });
   };
 
+
+  const handleSignOut = () => {
+    console.log('logging out...');
+    localStorage.removeItem('token');
+    dispatch({
+      type: SET_LOGGEDIN_STATUS,
+      payload: false
+    })
+  }
+
   const fullList = side => (
     <div
         className={classes.fullList}
@@ -42,29 +59,26 @@ export default function HomePageNavMenu() {
         onKeyDown={toggleDrawer(side, false)}
     >
       <List>
-          <ListItem button>
-            <ListItemText>
-              <Link to='/student/login'>
-                Student Login
-              </Link>
-            </ListItemText>
-          </ListItem>
-
-          <ListItem button>
-            <ListItemText>
-              <Link to='/teacher/login'>
-                Teacher Login
-              </Link>
-            </ListItemText>
-          </ListItem>
-
-          <ListItem button>
-            <ListItemText>
-              <Link to='/student/signup'>
-                Student Sign Up
-              </Link>
-            </ListItemText>
-          </ListItem>
+          {props.menuData.map(item => {
+              return (
+                <ListItem button key={item.text}>
+                    <ListItemText>
+                        <Link to={item.url}>
+                            {item.text}
+                        </Link>
+                    </ListItemText>
+                </ListItem>
+              )
+          })}
+          {props.showSignOut ? (
+              <ListItem button onClick={() => handleSignOut()}>
+                <ListItemText>
+                    <Link to='/student/login'>
+                        Sign Out
+                    </Link>
+                </ListItemText>
+            </ListItem>
+          ) : ( null )};
       </List>
     </div>
   );
@@ -80,3 +94,5 @@ export default function HomePageNavMenu() {
     </div>
   );
 }
+
+export default PopOutNavMenu
