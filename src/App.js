@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import {
   Route,
@@ -41,19 +41,21 @@ const App = () => {
   const { loggedIn } = useSelector(getAuthData);
 
   useEffect(() => {
+    const dispatchLoggedStatus = (bool) => {
+      if( bool === false ) localStorage.clear();
+      dispatch({
+        type: SET_LOGGEDIN_STATUS,
+        payload: bool
+      });
+    }
+
     const token = localStorage.getItem('token');
     token != null ?
       dispatchLoggedStatus(true) :
       dispatchLoggedStatus(false);
-  }, [loggedIn]);
+  }, [loggedIn, dispatch]);
 
-  const dispatchLoggedStatus = (bool) => {
-    if( bool === false ) localStorage.clear();
-    dispatch({
-      type: SET_LOGGEDIN_STATUS,
-      payload: bool
-    });
-  }
+
 
   return (
     <div className="App">
