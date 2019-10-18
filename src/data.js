@@ -28,10 +28,24 @@ export const userData = {
                 grade: "84",
                 feed: [
                     {
+                        id: '1234',
                         title: 'The History of Corn',
                         postedDate: '08/14/2019',
                         required: true,
-                        thumbnail: null
+                        thumbnail: 'https://picsum.photos/200/300',
+                        article: 'https://www.nytimes.com/2010/05/25/science/25creature.html',
+                        assignmentDesc: 'Read the article and write a brief 3 paragraph summary',
+                        dueDate: '08/20/19'
+                    },
+                    {
+                        id: '1235',
+                        title: 'Food and Nutrition in the Aftermath of Nuclear War',
+                        postedDate: '08/14/2019',
+                        required: true,
+                        thumbnail: 'https://picsum.photos/200/300',
+                        article: 'https://www.ncbi.nlm.nih.gov/books/NBK219173/',
+                        assignmentDesc: 'Read the article and write a brief 3 paragraph summary',
+                        dueDate: '08/20/19'
                     }
                 ]
             },
@@ -171,7 +185,7 @@ export const courseData =
                         title: 'The History of Corn',
                         postedDate: '08/14/2019',
                         required: true,
-                        thumbnail: 'https://picsum.photos/150',
+                        thumbnail: 'https://picsum.photos/200/300',
                         article: 'https://www.nytimes.com/2010/05/25/science/25creature.html',
                         assignmentDesc: 'Read the article and write a brief 3 paragraph summary',
                         dueDate: '08/20/19'
@@ -181,7 +195,7 @@ export const courseData =
                         title: 'Food and Nutrition in the Aftermath of Nuclear War',
                         postedDate: '08/14/2019',
                         required: true,
-                        thumbnail: 'https://picsum.photos/150',
+                        thumbnail: 'https://picsum.photos/200/300',
                         article: 'https://www.ncbi.nlm.nih.gov/books/NBK219173/',
                         assignmentDesc: 'Read the article and write a brief 3 paragraph summary',
                         dueDate: '08/20/19'

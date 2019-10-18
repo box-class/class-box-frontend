@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { userData } from '../../data';
-import Updates from './updates';
+import FeedItems from './FeedItems';
 import {
     ClassUpdatesWrap
 } from '../../Styles/student-dashboard/class-updates';
 
-const ClassUpdatesTray = () => {
+const ClassFeedBar = () => {
     const [data, setData] = useState();
     const [name, setName] = useState();
     useEffect(() => {
@@ -25,10 +25,10 @@ const ClassUpdatesTray = () => {
     return (
         <ClassUpdatesWrap>
             {data && data.map((d, index) => {
-                return <Updates data={d} key={index} name={name} />
+                return <FeedItems data={d} key={index} name={name} />
             })}
         </ClassUpdatesWrap>
     )
 }
 
-export default ClassUpdatesTray
+export default ClassFeedBar

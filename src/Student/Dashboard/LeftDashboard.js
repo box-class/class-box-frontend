@@ -3,14 +3,14 @@ import GradeCharts from './GradeCharts';
 import {
     LeftSide,
  } from '../../Styles/student-dashboard/student-dashboard';
+import ScheduleComponent from './ScheduleComponent';
 
-const LeftDashboard = () => {
+const LeftDashboard = (props) => {
     return (
-        <div>
-            <LeftSide>
-                <GradeCharts />
-            </LeftSide>
-        </div>
+        <LeftSide>
+            <ScheduleComponent />
+            <GradeCharts large={props.large} />
+        </LeftSide>
     )
 }
 

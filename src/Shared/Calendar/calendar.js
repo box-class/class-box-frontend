@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import StudentNav from '../Nav/StudentNavBar';
+import StudentNavBar from '../Nav/StudentNavBar';
 import DesktopCalendar from './components/desktop-calendar/desktop-calendar';
 import MobileCalendar from './components/mobile-calendar/mobile-calendar';
 
@@ -31,7 +31,7 @@ export default class Calendar extends Component {
         const { isMobile } = this.state;
         return(
             <div>
-                <StudentNav />
+                <StudentNavBar />
                 <div>
                     {
                         isMobile ?

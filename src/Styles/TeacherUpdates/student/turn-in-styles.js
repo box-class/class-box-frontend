@@ -11,7 +11,7 @@ export const TurnInWrap = styled.div`
     box-shadow: 3px 3px 4px ${colors.gray};
 `
 
-export const TurnInContent = styled.div`
+export const TurnInContentWrap = styled.div`
     width: 90%;
     margin: 20px auto;
 `

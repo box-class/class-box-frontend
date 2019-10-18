@@ -44,6 +44,12 @@ export const LoginFormWrap = styled.div`
     ${media.largeDt} {
         width: 30%;
     }
+
+    .forgotpw {
+        margin: 0 auto;
+        padding-bottom: 20px;
+        font-size: 12px;
+    }
 `
 
 export const Form = styled.div`

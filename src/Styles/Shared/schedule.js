@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, media } from '../Shared/variables';
+import { colors } from '../Shared/variables';
 
 export const ScheduleArea = styled.div`
     width: 100%;
@@ -31,7 +31,7 @@ export const ScheduleWrap = styled.div`
     border-bottom: 1px solid #eee;
 `
 
-export const ScheduleItem = styled.div`
+export const ScheduleItemWrap = styled.div`
     width: 100%;
     display: flex;
     padding: 15px 0;
