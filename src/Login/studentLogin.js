@@ -9,8 +9,8 @@ import {
     ButtonWrap,
     Form
 } from '../Styles/Login/login';
-import { Buttons } from '../Styles/Shared/reusable';
-import { Link } from 'react-router-dom';
+import LinkToButtons from '../Shared/LinkToButtons';
+import ForgotPassword from './ForgotPassword';
 
 const StudentLogin = () => {
     const [email, setEmail] = useState("");
@@ -50,15 +50,14 @@ const StudentLogin = () => {
                 </Form>
 
                 <ButtonWrap center={true}>
-                    <Buttons large={true} onClick={() => handleLogin()}>
-                        <Link to='/student/dashboard'>
-                            Sign In
-                        </Link>
-                    </Buttons>
+                    <LinkToButtons
+                        large={true}
+                        handleClick={handleLogin}
+                        url={'/student/dashboard'}
+                        text={"Sign In"}
+                    />
                 </ButtonWrap>
-                <div>
-                    <h4>Forgot Password?</h4>
-                </div>
+                <ForgotPassword />
             </LoginFormWrap>
         </LoginWrap>
     )
