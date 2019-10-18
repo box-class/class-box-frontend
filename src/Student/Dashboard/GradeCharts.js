@@ -21,6 +21,7 @@ const GradeCharts = (props) => {
                 {userData.currentCourses.map(course => {
                     return (
                     <SingleGradeChart
+                        key={course.shortName}
                         large={props.large}
                         course={course}
                     />
