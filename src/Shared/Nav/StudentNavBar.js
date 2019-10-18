@@ -8,7 +8,6 @@ const StudentNavBar = (props) => {
         {text: 'Dashboard', url: '/student/dashboard'},
         {text: 'Your Courses', url: '/student/courses'},
         {text: 'Register For Courses', url: '/student/register/courses'},
-        {text: 'Messages', url: '/student/dashboard'}, //TODO: CHANGE ME
         {text: 'Teacher Updates', url: '/student/teacherUpdates'},
     ]
 
