@@ -7,7 +7,7 @@ import CurrentCourses from '../Student/CourseList/CurrentCourses';
 import Calendar from '../Shared/Calendar/calendar';
 import TeacherUpdates from '../Student/TeacherUpdates/CourseHomework';
 import ClassAssignments from '../Student/TeacherUpdates/ClassAssignments';
-import TurnInHomeWork from '../Student/TeacherUpdates/turn-in-hw/turn-in-hwk';
+import TurnInHomeWork from '../Student/TeacherUpdates/TurnInHomework/TurnInHomework';
 import StudentDashboard from '../Student/Dashboard/student-dashboard-main';
 import CourseListMain from '../CourseRegistration/courselist';
 
