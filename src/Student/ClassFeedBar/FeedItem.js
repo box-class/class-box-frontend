@@ -5,7 +5,7 @@ import {
     ContentWrap
 } from '../../Styles/student-dashboard/class-updates';
 
-const Update = (props) => {
+const FeedItem = (props) => {
     const { data, name } = props;
 
     console.log(data)
@@ -22,4 +22,4 @@ const Update = (props) => {
     )
 }
 
-export default Update
+export default FeedItem

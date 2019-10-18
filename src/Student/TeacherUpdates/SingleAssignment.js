@@ -8,31 +8,32 @@ import {
     LinksWrap
 } from '../../Styles/TeacherUpdates/student/student-tu-styles';
 
-const Feed = (props) => {
+const SingleAssignment = (props) => {
+    const { feed } = props;
+
     return (
         <FeedItem>
                 <ImageWrap>
-                    <img src={props.feed.thumbnail} alt='thumbnail for article' />
+                    <img src={feed.thumbnail} alt='thumbnail for article' />
                 </ImageWrap>
                 <DateWrap>
-                    <p>posted: {props.feed.postedDate}</p>
-                    <p>due: {props.feed.dueDate}</p>
+                    <p>posted: {feed.postedDate}</p>
+                    <p>due: {feed.dueDate}</p>
                 </DateWrap>
                 <ContentWrap>
-                    <h4>{props.feed.title}</h4>
-                    <p>{props.feed.assignmentDesc}</p>
+                    <h4>{feed.title}</h4>
+                    <p>{feed.assignmentDesc}</p>
                 </ContentWrap>
                 <LinksWrap>
-                    <a href={props.feed.article} target='_blank' rel="noopener noreferrer">
+                    <a href={feed.article} target='_blank' rel="noopener noreferrer">
                         <p>Article</p>
                     </a>
-                    <Link to={`/student/turnin/${props.cid}/${props.feed.id}`} >
+                    <Link to={`/student/turnin/${props.cid}/${feed.id}`} >
                         <p>Turn In</p>
                     </Link>
                 </LinksWrap>
-            {/* add a button where the student can turn in homework */}
         </FeedItem>
     )
 }
 
-export default Feed
+export default SingleAssignment

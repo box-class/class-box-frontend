@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { userData } from '../../data';
-import ScheduleItems from './schedule-items';
+import ScheduleItems from './ScheduleItems';
 
 const ScheduleMain = (props) => {
     const [schedule, setSchedule] = useState([]);

@@ -31,7 +31,7 @@ export const ScheduleWrap = styled.div`
     border-bottom: 1px solid #eee;
 `
 
-export const ScheduleItem = styled.div`
+export const ScheduleItemWrap = styled.div`
     width: 100%;
     display: flex;
     padding: 15px 0;

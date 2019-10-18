@@ -8,7 +8,7 @@ import {
 // props from studentCourses
 // course={course}
 
-const StudentCourse = (props) => {
+const SingleCourse = (props) => {
     return(
         <CourseWrap>
             <h3>{props.course.shortName}</h3>
@@ -20,4 +20,4 @@ const StudentCourse = (props) => {
     )
 }
 
-export default StudentCourse
+export default SingleCourse
