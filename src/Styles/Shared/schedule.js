@@ -3,8 +3,6 @@ import { colors } from '../Shared/variables';
 
 export const ScheduleArea = styled.div`
     width: 100%;
-    display: flex;
-    flex-direction: column;
 `
 
 export const ScheduleHeader = styled.div`

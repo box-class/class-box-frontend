@@ -8,6 +8,7 @@ const HomepageNav = (props) => {
     const menuData = [
         {text: 'Student Login', url: '/login/student'},
         {text: 'Teacher Login', url: '/login/teacher'},
+        {text: 'Admin Login', url: '/login/admin'},
         {text: 'Student Sign Up', url: '/signup/student'},
     ]
 

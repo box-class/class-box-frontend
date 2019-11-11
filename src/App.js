@@ -27,12 +27,17 @@ const getAuthData = state => {
 const ProtectedRoute = ({ component: Component, logged, path, routeTo, ...rest }) => {
   return (
     <Route path={path} {...rest} render={(props) => {
-      return logged ? (
+      return logged === true ? (
         <Component {...props} />
       ) : (
-        <Redirect to={routeTo} />
-      )
-    }}
+        <Redirect to={
+          { pathname: routeTo,
+            state: {
+              from: props.location
+            }
+          }}
+        />
+      )}}
   />
 )};
 
@@ -41,6 +46,7 @@ const App = () => {
   const { loggedIn } = useSelector(getAuthData);
 
   useEffect(() => {
+    console.log('Running Effect')
     const dispatchLoggedStatus = (bool) => {
       if( bool === false ) localStorage.clear();
       dispatch({
@@ -56,7 +62,7 @@ const App = () => {
   }, [loggedIn, dispatch]);
 
 
-
+  console.log(loggedIn)
   return (
     <div className="App">
       <Switch>
@@ -68,8 +74,7 @@ const App = () => {
 
           <ProtectedRoute path="/student" component={StudentRoutes} logged={loggedIn} routeTo={"/login/student"} />
           <ProtectedRoute path="/teacher" component={TeacherRoutes} logged={loggedIn} routeTo={"/login/teacher"} />
-          <ProtectedRoute path="/admin" component={AdminRoutes} logged={loggedIn} />
-
+          <ProtectedRoute path="/admin" component={AdminRoutes} logged={loggedIn} routeTo={"/login/admin"} />
       </Switch>
     </div>
   );

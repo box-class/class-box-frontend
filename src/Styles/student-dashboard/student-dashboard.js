@@ -23,11 +23,7 @@ export const GradesHeading = styled.div`
 export const DashboardWrap = styled.div`
     width: 100%;
     display: flex;
-    flex-direction: column;
-
-    ${media.desktop} {
-        flex-direction: row;
-    }
+    flex-direction: ${props => props.flex};
 `
 
 export const LeftSide = styled.div`

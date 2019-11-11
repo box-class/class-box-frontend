@@ -19,7 +19,7 @@ const StudentDashboard = () => {
     return (
         <>
             <StudentNavBar />
-            <DashboardWrap>
+            <DashboardWrap flex="row">
                 <LeftDashboard large={large} />
                 <RightDashboard />
             </DashboardWrap>
